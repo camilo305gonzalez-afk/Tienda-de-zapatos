@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SUELA — Tienda de zapatos en Bogotá. Tenis, running, formales y sandalias con envío a todo el país.">
+  <title>SUELA | Tienda de zapatos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Aviso superior -->
+  <div class="topbar">Envío gratis en compras desde $250.000 · Cambios por talla sin costo</div>
+
+  <!-- ========== ENCABEZADO ========== -->
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+
+      <a href="#inicio" class="logo" aria-label="SUELA, ir al inicio">SUELA<span>.</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#categorias" class="nav__link">Categorías</a>
+        <a href="#tienda" class="nav__link">Tienda</a>
+        <a href="#beneficios" class="nav__link">Beneficios</a>
+        <a href="#opiniones" class="nav__link">Opiniones</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="favToggle" aria-label="Ver favoritos" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.3-9.1C1.1 8.700 3 5 6.500 5c2 0 3.500 1.100 5.500 3.200C14 6.100 15.500 5 17.500 5 21 5 22.900 8.700 21.300 11.900 19 16.400 12 21 12 21z"/></svg>
+          <span class="badge" id="favCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartOpen" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Colección 2026</p>
+          <h1 class="hero__title">Pisa<br><em>distinto.</em></h1>
+          <p class="hero__text">Tenis, running, formales y sandalias de las mejores marcas. Encuentra tu talla, elige tu estilo y recíbelos en casa.</p>
+          <div class="hero__buttons">
+            <a href="#tienda" class="btn btn--lime">Comprar ahora</a>
+            <a href="#categorias" class="btn btn--line">Explorar categorías</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>+200</strong><span>modelos</span></li>
+            <li><strong>36–46</strong><span>tallas</span></li>
+            <li><strong>48 h</strong><span>envío nacional</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__circle"></div>
+          <div class="hero__shoe" id="heroShoe"></div>
+          <span class="sticker sticker--1">-30%<small>OFF</small></span>
+          <span class="sticker sticker--2">NEW</span>
+        </div>
+      </div>
+
+      <!-- Cinta animada -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Nuevos ingresos</span><span>★</span><span>Envío gratis</span><span>★</span><span>Cambios fáciles</span><span>★</span><span>Paga como quieras</span><span>★</span>
+          <span>Nuevos ingresos</span><span>★</span><span>Envío gratis</span><span>★</span><span>Cambios fáciles</span><span>★</span><span>Paga como quieras</span><span>★</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORÍAS ========== -->
+    <section class="section" id="categorias">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Para cada paso</p>
+          <h2 class="section__title">Compra por categoría</h2>
+        </header>
+
+        <div class="cats">
+          <button class="cat" data-cat="urbanos">
+            <span class="cat__art" data-shoe="urbanos"></span>
+            <span class="cat__name">Urbanos</span>
+            <span class="cat__arrow">→</span>
+          </button>
+          <button class="cat" data-cat="running">
+            <span class="cat__art" data-shoe="running"></span>
+            <span class="cat__name">Running</span>
+            <span class="cat__arrow">→</span>
+          </button>
+          <button class="cat" data-cat="formales">
+            <span class="cat__art" data-shoe="formales"></span>
+            <span class="cat__name">Formales</span>
+            <span class="cat__arrow">→</span>
+          </button>
+          <button class="cat" data-cat="sandalias">
+            <span class="cat__art" data-shoe="sandalias"></span>
+            <span class="cat__name">Sandalias</span>
+            <span class="cat__arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIENDA ========== -->
+    <section class="section section--dark" id="tienda">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Catálogo</p>
+          <h2 class="section__title">Todos los modelos</h2>
+        </header>
+
+        <div class="toolbar">
+          <div class="toolbar__search">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <input type="search" id="searchInput" placeholder="Buscar por nombre o marca" aria-label="Buscar zapatos">
+          </div>
+
+          <label class="toolbar__select">
+            <span>Talla</span>
+            <select id="sizeFilter">
+              <option value="">Todas</option>
+            </select>
+          </label>
+
+          <label class="toolbar__select">
+            <span>Ordenar</span>
+            <select id="sortSelect">
+              <option value="destacados">Destacados</option>
+              <option value="menor">Menor precio</option>
+              <option value="mayor">Mayor precio</option>
+              <option value="nombre">Nombre A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="chips" id="chips" role="tablist" aria-label="Filtrar por categoría">
+          <button class="chip is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="chip" data-filter="urbanos" role="tab" aria-selected="false">Urbanos</button>
+          <button class="chip" data-filter="running" role="tab" aria-selected="false">Running</button>
+          <button class="chip" data-filter="formales" role="tab" aria-selected="false">Formales</button>
+          <button class="chip" data-filter="sandalias" role="tab" aria-selected="false">Sandalias</button>
+        </div>
+
+        <p class="results" id="results" aria-live="polite"></p>
+        <div class="grid" id="products"></div>
+        <p class="empty" id="empty" hidden>No encontramos zapatos con esos filtros. Prueba con otra búsqueda o talla.</p>
+      </div>
+    </section>
+
+    <!-- ========== BANNER ========== -->
+    <section class="banner">
+      <div class="wrap banner__inner">
+        <div>
+          <p class="eyebrow eyebrow--dark">Solo esta semana</p>
+          <h2 class="banner__title">Lleva 2 pares y ahorra 15%</h2>
+          <p class="banner__text">Combina tenis, running o sandalias. El descuento se aplica al pedir por WhatsApp con el código <strong>PAR2</strong>.</p>
+        </div>
+        <a href="#tienda" class="btn btn--dark">Armar mi combo</a>
+      </div>
+    </section>
+
+    <!-- ========== BENEFICIOS ========== -->
+    <section class="section" id="beneficios">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Por qué SUELA</p>
+          <h2 class="section__title">Comprar sin complicaciones</h2>
+        </header>
+
+        <div class="perks">
+          <article class="perk">
+            <span class="perk__num">01</span>
+            <h3>Envío rápido</h3>
+            <p>Despachamos en 24 horas. Bogotá en el día y resto del país en 2 a 4 días.</p>
+          </article>
+          <article class="perk">
+            <span class="perk__num">02</span>
+            <h3>Cambio de talla</h3>
+            <p>¿No te quedaron? Cámbialos sin costo dentro de los 30 días siguientes.</p>
+          </article>
+          <article class="perk">
+            <span class="perk__num">03</span>
+            <h3>Originales</h3>
+            <p>Trabajamos directo con las marcas. Cada par llega con su caja y garantía.</p>
+          </article>
+          <article class="perk">
+            <span class="perk__num">04</span>
+            <h3>Paga fácil</h3>
+            <p>Efectivo contra entrega, Nequi, Daviplata, transferencia o tarjeta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OPINIONES ========== -->
+    <section class="section section--dark" id="opiniones">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Clientes felices</p>
+          <h2 class="section__title">Lo que dicen de nosotros</h2>
+        </header>
+
+        <div class="reviews">
+          <blockquote class="review">
+            <p class="review__stars" aria-label="5 de 5 estrellas">★★★★★</p>
+            <p>“Pedí unos tenis un martes y el jueves ya los tenía. La talla perfecta y muy bien empacados.”</p>
+            <footer>— Camila R., Chapinero</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__stars" aria-label="5 de 5 estrellas">★★★★★</p>
+            <p>“Me cambiaron los zapatos formales por una talla más grande sin ningún problema. Muy amables.”</p>
+            <footer>— Andrés M., Medellín</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__stars" aria-label="4 de 5 estrellas">★★★★☆</p>
+            <p>“Los de running son comodísimos. Ya voy por mi segundo par con ellos.”</p>
+            <footer>— Laura P., Cali</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER + CONTACTO ========== -->
+    <section class="section" id="contacto">
+      <div class="wrap contact">
+        <div class="contact__info">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section__title">Visita la tienda</h2>
+          <ul class="contact__list">
+            <li><strong>Dirección</strong><span>Calle 00 # 00-00, Bogotá (dirección de ejemplo)</span></li>
+            <li><strong>Horario</strong><span>Lunes a sábado 10:00 a. m. – 8:00 p. m.<br>Domingos 11:00 a. m. – 6:00 p. m.</span></li>
+            <li><strong>WhatsApp</strong><span>+57 300 000 0000</span></li>
+            <li><strong>Correo</strong><span>hola@suela.co</span></li>
+          </ul>
+        </div>
+
+        <form class="card-form" id="newsletterForm" novalidate>
+          <h3>Únete y recibe 10% off</h3>
+          <p>Suscríbete para enterarte primero de lanzamientos y ofertas.</p>
+          <div class="field">
+            <label for="nlName">Nombre</label>
+            <input type="text" id="nlName" placeholder="Tu nombre" required>
+            <small class="field__error"></small>
+          </div>
+          <div class="field">
+            <label for="nlEmail">Correo</label>
+            <input type="email" id="nlEmail" placeholder="tucorreo@ejemplo.com" required>
+            <small class="field__error"></small>
+          </div>
+          <button type="submit" class="btn btn--lime btn--block">Quiero mi descuento</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== PIE ========== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#inicio" class="logo">SUELA<span>.</span></a>
+      <p>Prototipo académico · <span id="year"></span></p>
+      <a href="#inicio" class="to-top" aria-label="Volver arriba">↑</a>
+    </div>
+  </footer>
+
+  <!-- ========== MODAL DE PRODUCTO ========== -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true">
+    <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div class="modal__art" id="modalArt"></div>
+    <div class="modal__body">
+      <p class="modal__brand" id="modalBrand"></p>
+      <h3 class="modal__name" id="modalName"></h3>
+      <p class="modal__price" id="modalPrice"></p>
+      <p class="modal__desc" id="modalDesc"></p>
+
+      <p class="modal__label">Elige tu talla <small>(Colombia)</small></p>
+      <div class="sizes" id="modalSizes"></div>
+      <p class="modal__error" id="modalError" role="alert"></p>
+
+      <button class="btn btn--lime btn--block" id="modalAdd">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <!-- ========== CARRITO ========== -->
+  <aside class="cart" id="cart" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart__head">
+      <h2>Tu bolsa</h2>
+      <button class="cart__close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart__body">
+      <p class="cart__empty" id="cartEmpty">Tu bolsa está vacía.<br>Encuentra tu próximo par.</p>
+      <ul class="cart__items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart__foot" id="cartFoot">
+      <div class="cart__row"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <div class="cart__row"><span>Envío</span><span id="cartShipping">$0</span></div>
+      <div class="cart__row cart__row--total"><span>Total</span><span id="cartTotal">$0</span></div>
+      <p class="cart__hint" id="cartHint"></p>
+
+      <form id="checkoutForm" novalidate>
+        <div class="field">
+          <label for="custName">Nombre</label>
+          <input type="text" id="custName" placeholder="Nombre completo" required>
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label for="custCity">Ciudad</label>
+          <input type="text" id="custCity" placeholder="Ciudad" required>
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label for="custAddress">Dirección</label>
+          <input type="text" id="custAddress" placeholder="Calle, número, barrio" required>
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label for="custPay">Método de pago</label>
+          <select id="custPay">
+            <option>Contra entrega</option>
+            <option>Nequi</option>
+            <option>Daviplata</option>
+            <option>Transferencia</option>
+            <option>Tarjeta (link de pago)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--lime btn--block">Finalizar por WhatsApp</button>
+        <button type="button" class="btn btn--ghost btn--block" id="cartClear">Vaciar bolsa</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
